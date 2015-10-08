@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="pref_theme"
+        android:title="@string/theme_title"
+        android:summary="@string/theme_summary"
+        android:dialogTitle="@string/theme_dialog_title"
+        android:entries="@array/theme_keys"
+        android:entryValues="@array/theme_values"
+        android:defaultValue="@string/theme_default" />
+
+    <Preference
+        android:key="pref_rate_this_app"
+        android:title="@string/rate_this_app_title"
+        android:summary="@string/rate_this_app_summary"
+        android:dialogTitle="@string/rate_this_app_dialog_title" />
+
+    <Preference
+        android:key="pref_buy"
+        android:title="@string/buy_title"
+        android:summary="@string/buy_summary"
+        android:dialogTitle="@string/buy_dialog_title" />
+
+</PreferenceScreen>

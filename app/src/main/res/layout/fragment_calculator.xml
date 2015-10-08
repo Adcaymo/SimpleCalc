@@ -1,0 +1,228 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    tools:context=".CalculatorFragment">
+
+    <!-- calculator display -->
+    <TextView
+        android:id="@+id/displayTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#A6D39D"
+        android:gravity="center|end"
+        android:padding="5dp"
+        android:textSize="60sp"
+        android:text="@string/display_text_view" />
+
+    <!-- buttons, 1st row (AC +/- % /) -->
+    <LinearLayout
+        android:id="@+id/buttonRow1"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/acButton"
+            android:background="@drawable/ac_button_shape"
+            android:text="@string/ac_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/plusMinusButton"
+            android:background="@drawable/operation_button_shape"
+            android:text="@string/plus_minus_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/percentButton"
+            android:background="@drawable/operation_button_shape"
+            android:text="@string/percent_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/divisionButton"
+            android:background="@drawable/operation_button_shape"
+            android:text="@string/division_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- buttons, 2nd row (7 8 9 *) -->
+    <LinearLayout
+        android:id="@+id/buttonRow2"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/sevenButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/seven_button" />
+
+        <Button
+            android:id="@+id/eightButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/eight_button" />
+
+        <Button
+            android:id="@+id/nineButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/nine_button" />
+
+        <Button
+            android:id="@+id/multiplicationButton"
+            android:background="@drawable/operation_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/multiplication_button" />
+    </LinearLayout>
+
+    <!-- buttons, 3rd row (4 5 6 -) -->
+    <LinearLayout
+        android:id="@+id/buttonRow3"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/fourButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/four_button" />
+
+        <Button
+            android:id="@+id/fiveButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/five_button" />
+
+        <Button
+            android:id="@+id/sixButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/six_button" />
+
+        <Button
+            android:id="@+id/subtractionButton"
+            android:background="@drawable/operation_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/subtraction_button" />
+    </LinearLayout>
+
+    <!-- buttons, 4th row (1 2 3 +) -->
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:id="@+id/buttonRow4"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/oneButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/one_button" />
+
+        <Button
+            android:id="@+id/twoButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/two_button"/>
+
+        <Button
+            android:id="@+id/threeButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/three_button"/>
+
+        <Button
+            android:id="@+id/additionButton"
+            android:background="@drawable/operation_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/addition_button" />
+
+    </LinearLayout>
+
+    <!-- buttons, 5th row (0 . =) -->
+    <LinearLayout
+        android:id="@+id/buttonRow5"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/decimalButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/decimal_button" />
+
+        <Button
+            android:id="@+id/zeroButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/zero_button" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:background="@drawable/digit_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/delete_button" />
+
+        <Button
+            android:id="@+id/equalsButton"
+            android:background="@drawable/operation_button_shape"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/equals_button" />
+
+    </LinearLayout>
+
+</LinearLayout>

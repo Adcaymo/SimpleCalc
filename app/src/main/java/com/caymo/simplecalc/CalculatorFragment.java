@@ -70,7 +70,6 @@ public class CalculatorFragment extends Fragment
 
         // references to widgets
         displayTextView = (TextView) view.findViewById(R.id.displayTextView);
-        //realTimeTextView = (TextView) view.findViewById(R.id.realTimeTextView);
         acButton = (Button) view.findViewById(R.id.acButton);
         plusMinusButton = (Button) view.findViewById(R.id.plusMinusButton);
         percentButton = (Button) view.findViewById(R.id.percentButton);
@@ -186,94 +185,62 @@ public class CalculatorFragment extends Fragment
                 break;
             case R.id.plusMinusButton:
                 handlePlusMinus();
-                //sb = sb.append("\u00B1");
-                //realTimeTextView.setText(sb);
                 break;
             case R.id.percentButton:
                 setValue(Double.toString((0.01 * Double.parseDouble(displayTextView.getText().toString()))));
-                //realTimeTextView.setText("%");
                 break;
             case R.id.divisionButton:
                 handleEquals(4);
-                //realTimeTextView.setText("\u00F7");
                 break;
             case R.id.sevenButton:
                 handleNumber(7);
-                //realTimeTextView.setText("7");
                 break;
             case R.id.eightButton:
                 handleNumber(8);
-                //realTimeTextView.setText("8");
                 break;
             case R.id.nineButton:
                 handleNumber(9);
-                //realTimeTextView.setText("9");
                 break;
             case R.id.multiplicationButton:
                 handleEquals(3);
-                //realTimeTextView.setText("\u00D7");
                 break;
             case R.id.fourButton:
                 handleNumber(4);
-                //realTimeTextView.setText("4");
                 break;
             case R.id.fiveButton:
                 handleNumber(5);
-                //realTimeTextView.setText("5");
-                //handleNumber(Integer.parseInt(fiveButton.getText().toString()));
                 break;
             case R.id.sixButton:
                 handleNumber(6);
-                //realTimeTextView.setText("6");
                 break;
             case R.id.subtractionButton:
                 handleEquals(2);
-                //realTimeTextView.setText("\u2212");
                 break;
             case R.id.oneButton:
-                //txt = displayTextView.getText().toString();
-                //txt += "1";
                 handleNumber(1);
-                //sb = sb.append("1");
-                //realTimeTextView.setText(text);
                 break;
             case R.id.twoButton:
                 handleNumber(2);
-                //txt = displayTextView.getText().toString();
-                //txt += Integer.toString(2);
-                //sb = sb.append("2");
-                //realTimeTextView.setText(text);
                 break;
             case R.id.threeButton:
                 handleNumber(3);
-                //realTimeTextView.setText("3");
                 break;
             case R.id.additionButton:
                 handleEquals(1);
-                //txt = displayTextView.getText().toString();
-                //txt += "+";
-                //sb = sb.append("\u002B");
-                //realTimeTextView.setText(text);
                 break;
             case R.id.deleteButton:
                 handleDelete();
-                //handleNumber(00);
-                //realTimeTextView.setText("00");
                 break;
             case R.id.zeroButton:
                 handleNumber(0);
-                //realTimeTextView.setText("0");
                 break;
             case R.id.decimalButton:
                 handleDecimal();
-                //realTimeTextView.setText(".");
                 break;
             case R.id.equalsButton:
                 handleEquals(0);
-                //realTimeTextView.setText("\u003D");
                 break;
         }
-        //realTimeTextView.setText(txt);
         calculations = new Calculations();
 
         // get current display text and put into database
@@ -282,7 +249,6 @@ public class CalculatorFragment extends Fragment
 
         // adds calculation to database
         calculatorDB.addCalculation(calculations);
-        //printDatabase();
     }
 
     public void printDatabase() {
@@ -460,7 +426,6 @@ public class CalculatorFragment extends Fragment
     private void reset() {
         num = 0;
         displayTextView.setText("0");
-        //realTimeTextView.setText("");
         operator = 1;
     }
 

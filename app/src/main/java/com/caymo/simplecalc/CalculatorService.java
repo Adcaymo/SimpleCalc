@@ -18,25 +18,21 @@ public class CalculatorService extends Service {
 
     @Override
     public void onCreate() {
-        //Log.i("Calculator", "Service created");
         startTimer();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        //Log.i("Calculator", "Service started");
         return START_STICKY;
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        //Log.i("Calculator", "Service bound - not used!");
         return null;
     }
 
     @Override
     public void onDestroy() {
-        //Log.i("Calculator", "Service destroyed");
         stopTimer();
     }
 
@@ -45,7 +41,6 @@ public class CalculatorService extends Service {
 
             @Override
             public void run() {
-                //Log.i("Calculator", "Timer task started");
                 sendNotification("Buy Ad-Free Version today!");
             }
         };

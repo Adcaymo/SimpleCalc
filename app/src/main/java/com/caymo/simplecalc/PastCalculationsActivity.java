@@ -27,6 +27,5 @@ public class PastCalculationsActivity extends AppCompatActivity {
                     + ", Calculation: " + c.getCalculation() + "\n";
         }
         pastCalculationTextView.setText(calculation);
-        //Log.i(TAG, calculation);
     }
 }
